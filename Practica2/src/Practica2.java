@@ -37,15 +37,16 @@ public class Practica2 {
         while (iter.hasPrevious()) {
             iter.previous();
         }
-
-        List<String> aux = new ArrayList<>();
+        List<String> copia = new ArrayList<>();
         while (iter.hasNext()) {
-            aux.add(iter.next());
+            copia.add(iter.next());
         }
-
-        for (int i = 0; i < aux.size(); i++) {
+        while (iter.hasPrevious()) {
             iter.previous();
-            iter.set(aux.get(i));
+        }
+        for (int i = copia.size() - 1; i >= 0; i--) {
+            iter.next();
+            iter.set(copia.get(i));
         }
     }
 
@@ -65,7 +66,7 @@ public class Practica2 {
 
     public static<T> List<T> detectarAlternancia (ListIterator<T> iter) {
         List<T> resultado = new ArrayList<>();
-
+        return null;
 
     }
 
