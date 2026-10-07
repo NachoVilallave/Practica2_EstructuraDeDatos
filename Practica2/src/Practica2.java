@@ -66,6 +66,7 @@ public class Practica2 {
 
     public static<T> List<T> detectarAlternancia (ListIterator<T> iter) {
         List<T> resultado = new ArrayList<>();
+
         return null;
 
     }
