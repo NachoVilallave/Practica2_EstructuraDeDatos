@@ -67,8 +67,29 @@ public class Practica2 {
     public static<T> List<T> detectarAlternancia (ListIterator<T> iter) {
         List<T> resultado = new ArrayList<>();
 
-        return null;
+        while (iter.hasPrevious()) {
+            iter.previous();
+        }
 
+        if (!iter.hasNext()) return resultado;
+        T e1 = iter.next();
+
+        if (!iter.hasNext()) return resultado;
+        T e2 = iter.next();
+
+        while (iter.hasNext()) {
+            T e3 = iter.next();
+
+            if (Objects.equals(e1, e3) && !Objects.equals(e1, e2)) {
+                resultado.add(e1);
+            }
+
+            e1 = e2;
+            e2 = e3;
+        }
+
+        return resultado;
+    
     }
 
 }
